@@ -2,15 +2,15 @@
 
 ## 📑 Índice
 
-1. [🎯 Introducción](#-introducción)  
-2. [🎯 Objetivos](#-objetivos)  
-3. [🎮 Funcionalidades principales](#-funcionalidades-principales)  
-4. [🗃️ Diagrama de base de datos](#-diagrama-de-base-de-datos)  
-5. [🧩 Diagrama de clases](#-diagrama-de-clases)  
-6. [✅ Estándares técnicos de desarrollo cumplidos](#-estándares-técnicos-de-desarrollo-cumplidos)  
-7. [🤝 Forma de trabajo colaborativa](#-forma-de-trabajo-colaborativa)  
-8. [📚 Documentación adicional](#-documentación-adicional)  
-9. [👥 Integrantes del grupo con los que realicé el trabajo](#-integrantes-del-grupo-con-los-que-realicé-el-trabajo)
+1. [🎯 Introducción](#introducción)  
+2. [🎯 Objetivos](#objetivos)  
+3. [🎮 Funcionalidades principales](#funcionalidades-principales)  
+4. [🗃️ Diagrama de base de datos](#diagrama-de-base-de-datos)  
+5. [🧩 Diagrama de clases](#diagrama-de-clases)  
+6. [✅ Estándares técnicos de desarrollo cumplidos](#estándares-técnicos-de-desarrollo-cumplidos)  
+7. [🤝 Forma de trabajo colaborativa](#forma-de-trabajo-colaborativa)  
+8. [📚 Documentación adicional](#documentación-adicional)  
+9. [👥 Integrantes del grupo con los que realicé el trabajo](#integrantes-del-grupo-con-los-que-realicé-el-trabajo)
 
 ## Introducción
 
