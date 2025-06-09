@@ -1,5 +1,15 @@
 # TPI "Estanciero"
 
+## 📑 Índice
+
+1. [🎯 Introducción](#introducción)  
+2. [🎯 Objetivos](#objetivos)  
+3. [🎮 Funcionalidades principales](#-funcionalidades-principales)  
+4. [✅ Estándares técnicos de desarrollo cumplidos](#-estándares-técnicos-de-desarrollo-cumplidos)  
+5. [🤝 Forma de trabajo colaborativa](#-forma-de-trabajo-colaborativa)  
+6. [📚 Documentación adicional](#-documentación-adicional)  
+7. [👥 Integrantes del grupo con los que realicé el trabajo](#integrantes-del-grupo-con-los-que-realicé-el-trabajo)
+
 ## Introducción
 
 El juego del Estanciero es una adaptación argentina del clásico juego de mesa Monopoly. Fue creado en 1942, y desde 
@@ -49,6 +59,140 @@ valiosa en el uso de herramientas profesionales ampliamente utilizadas en la ind
 gráfica que se integre al proyecto de BackEnd mediante apis Rest y que sea visualmente atractivo y fácil de usar, que 
 permita al jugador interactuar de manera intuitiva con los elementos del juego.
 
+# 🎮 Funcionalidades principales
+
+A continuación se detallan las funcionalidades implementadas en el proyecto, en base a los **requerimientos funcionales** establecidos en el Trabajo Práctico Integrador de la materia **Laboratorio de Computación III**. Estas funcionalidades reflejan los objetivos técnicos y lógicos alcanzados.
+
+## 📦 Contenido del juego simulado
+
+- Simulación de tablero de juego con casillas representando propiedades, estaciones, eventos y situaciones especiales.
+- Implementación de:
+  - 6 peones (jugadores: 1 humano y hasta 4 bots).
+  - 29 tarjetas de escrituras (propiedades).
+  - 32 tarjetas de "Suerte y Destino".
+  - Chacras, estancias, ferrocarriles.
+  - Dados y billetes virtuales.
+
+## 🎮 Inicio del juego
+
+- El jugador puede iniciar la partida y elegir entre tres niveles de dificultad:
+  - **Fácil**: 2 bots (1 moderado, 1 conservador).
+  - **Medio**: 3 bots (1 agresivo, 1 moderado, 1 conservador).
+  - **Difícil**: 4 bots (1 agresivo, 2 moderados, 1 conservador).
+- Se define el orden de turno según tiradas de dados iniciales.
+- Posibilidad de activar una condición de victoria alternativa por acumulación de dinero.
+- Todos los jugadores inician con $35.000 desde la salida.
+
+## 🎲 Movimiento en el tablero
+
+- Lanzamiento de dados y movimiento automático de peones.
+- Si el jugador cae en:
+  - **Propiedad no adquirida**: puede comprarla.
+  - **Propiedad ajena**: paga alquiler automáticamente.
+  - **Doble en los dados**: se otorga un turno extra. Al tercer doble consecutivo, el jugador va a la cárcel.
+- Gestión automática de pagos y cobros en cada movimiento.
+
+## 🏘️ Compra y venta de propiedades
+
+- Los jugadores pueden comprar propiedades disponibles al caer en ellas.
+- Venta de propiedades propias al banco (automática).
+- Compra-venta entre jugadores: opción **opcional**, implementada en parte para ciertos perfiles virtuales.
+
+## 🏗️ Construcción de mejoras
+
+- Construcción de **Chacras**, **Campos** y **Estancias** en propiedades adquiridas, si se cumplen los requisitos.
+- Mejora exclusiva entre el propietario y el banco.
+- Lógica validada por perfil del jugador (porcentaje de dinero disponible, zonas preferidas, etc.).
+
+## 🎭 Eventos y situaciones especiales
+
+- Implementación de:
+  - Casillas de **Suerte** y **Destino** con acciones automáticas.
+  - **Impuestos** y **Premios** cobrados o pagados automáticamente al banco.
+  - **Cárcel**: jugadores deben permanecer detenidos si son enviados, con lógica de liberación.
+  - **Casilla de descanso**: permite optar por permanecer hasta dos turnos si no se saca doble.
+
+## 💰 Gestión financiera
+
+- Manejo automatizado de dinero:
+  - Compras, ventas, alquileres, impuestos y premios.
+- Verificación de fondos antes de realizar operaciones.
+- Cálculo de rentabilidad y lógica para evitar bancarrota.
+
+## 🏁 Finalización del juego
+
+- El juego termina cuando:
+  - Un jugador alcanza el monto objetivo (si se activó esa condición).
+  - Todos los demás jugadores quedan en bancarrota.
+- Se muestra un mensaje indicando al jugador ganador.
+
+## 🧠 Perfiles virtuales (bots)
+
+- **Conservador**:
+  - Prioriza propiedades baratas (Formosa, Río Negro, Salta).
+  - Construye mejoras solo si no superan el 30% de su dinero.
+- **Moderado/Equilibrado**:
+  - Balance entre propiedades y mejoras (Mendoza, Santa Fe, Tucumán).
+  - Construye si mejoras no superan el 50% o cuando el 75% de propiedades fueron vendidas.
+  - Busca completar ferrocarriles.
+- **Agresivo**:
+  - Alta inversión y riesgo (Tucumán, Córdoba, Buenos Aires).
+  - Compra todo lo posible si completó sus zonas.
+  - Dispuesto a pagar hasta 200% para completar provincias preferidas.
+  - Mejora propiedades en cada oportunidad.
+
+![Diagrama de clases del juego El Estanciero](docs/Diagrama_de_clase_El_estanciero.png)
+
+# ✅ Estándares técnicos de desarrollo cumplidos
+
+Durante el desarrollo del proyecto, se cumplió con los siguientes requerimientos no funcionales establecidos por la consigna del Trabajo Práctico Integrador:
+
+## 📌 Calidad del código y buenas prácticas
+
+- El código sigue las convenciones de codificación de **Java 11**, garantizando legibilidad, mantenibilidad y escalabilidad.
+- Se aplicó el **principio de responsabilidad única (SRP)** y otros principios de **diseño SOLID**, promoviendo una arquitectura modular y de alta cohesión.
+- La estructura de paquetes está organizada por capas (model, services, entities, etc.), facilitando la navegación, el testing y futuras extensiones del código.
+
+## ⚙️ Herramientas de construcción y gestión
+
+- Se utilizó **Maven** como sistema de construcción y gestión de dependencias.
+- El proyecto está estructurado siguiendo buenas prácticas de Maven: uso de `pom.xml`, definición clara de dependencias, y compatibilidad con entornos de integración continua.
+
+## 🧪 Pruebas unitarias y cobertura
+
+- Se implementaron pruebas unitarias utilizando **JUnit** y **Mockito**.
+- Se logró una cobertura de código superior al **80%** mediante el uso de **JaCoCo**, cumpliendo con el estándar solicitado por la consigna.
+- Las pruebas aseguran el correcto funcionamiento de las clases principales y validan comportamientos clave del juego como:
+  - Reglas de movimiento
+  - Transacciones de compra/venta
+  - Lógica de perfiles virtuales
+  - Gestión de eventos y finanzas
+
+---
+
+El cumplimiento de estos requerimientos garantiza no solo un producto funcional, sino también una **base de código profesional**, con estándares de calidad, pruebas y arquitectura sólida.
+
+## 🤝 Forma de trabajo colaborativa
+
+Este proyecto fue desarrollado de forma colaborativa en un equipo de 6 integrantes, fomentando la autogestión, organización interna y comunicación constante entre los miembros del grupo.
+
+- Se aplicó el **workflow GitFlow** para estructurar el desarrollo en ramas: `main`, `develop`, `feature`, `release` y `hotfix`, siguiendo las buenas prácticas aprendidas en clase.
+- Utilizamos **Git y GitHub** como herramientas principales de control de versiones y trabajo colaborativo, manteniendo un historial claro y organizado de cambios.
+- La coordinación del equipo incluyó:
+  - Asignación equitativa de tareas según las fortalezas individuales.
+  - Planificación de hitos de desarrollo (diseño, implementación, pruebas, documentación).
+  - Comunicación constante y efectiva a través de reuniones y herramientas digitales.
+- El repositorio fue gestionado dentro del **GitHub Classroom** habilitado por la cátedra, donde también se organizaron entregas parciales y seguimiento del progreso.
+
+Esta forma de trabajo fortaleció las competencias de desarrollo en equipo, planificación de proyectos y uso profesional de herramientas de versionado.
+
+## 📚 Documentación adicional
+
+- 🎨 **Explicación de la interfaz de usuario**  
+  📄 Ver el documento [UXexplanation.md](docs/UXDiagram/UXexplanation.md) para más información sobre la experiencia de usuario implementada.
+
+- 🗃️ **Modelo entidad-relación (DER) y diagrama de clases completo (editable)**  
+  🔗 Accedé al archivo editable en [draw.io](https://app.diagrams.net/#G1jZHsZa8KM6ooPnOhm5nkLmQzmhAp4Le6#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D)
 
 ## Integrantes del grupo con los que realicé el trabajo
 
