@@ -2,14 +2,15 @@
 
 ## 📑 Índice
 
-1. [🎯 Introducción](#introducción)  
-2. [🎯 Objetivos](#objetivos)  
+1. [🎯 Introducción](#-introducción)  
+2. [🎯 Objetivos](#-objetivos)  
 3. [🎮 Funcionalidades principales](#-funcionalidades-principales)  
-4. [🧩 Diagrama de clases](#-diagrama-de-clases)
-5. [✅ Estándares técnicos de desarrollo cumplidos](#-estándares-técnicos-de-desarrollo-cumplidos)  
-6. [🤝 Forma de trabajo colaborativa](#-forma-de-trabajo-colaborativa)  
-7. [📚 Documentación adicional](#-documentación-adicional)  
-8. [👥 Integrantes del grupo con los que realicé el trabajo](#integrantes-del-grupo-con-los-que-realicé-el-trabajo)
+4. [🗃️ Diagrama de base de datos](#-diagrama-de-base-de-datos)  
+5. [🧩 Diagrama de clases](#-diagrama-de-clases)  
+6. [✅ Estándares técnicos de desarrollo cumplidos](#-estándares-técnicos-de-desarrollo-cumplidos)  
+7. [🤝 Forma de trabajo colaborativa](#-forma-de-trabajo-colaborativa)  
+8. [📚 Documentación adicional](#-documentación-adicional)  
+9. [👥 Integrantes del grupo con los que realicé el trabajo](#-integrantes-del-grupo-con-los-que-realicé-el-trabajo)
 
 ## Introducción
 
@@ -142,6 +143,12 @@ A continuación se detallan las funcionalidades implementadas en el proyecto, en
   - Dispuesto a pagar hasta 200% para completar provincias preferidas.
   - Mejora propiedades en cada oportunidad.
 
+## 🗃️ Diagrama de base de datos
+
+El siguiente diagrama muestra la estructura del sistema de almacenamiento de datos del proyecto.  
+Este sistema permite **guardar el estado de las partidas** de los jugadores, de manera que puedan **ser retomadas o consultadas en el futuro**.
+
+![Diagrama de base de datos](docs/DatabaseDiagram.png)
 
 ## 🧩 Diagrama de clases
 
@@ -196,9 +203,6 @@ Esta forma de trabajo fortaleció las competencias de desarrollo en equipo, plan
 
 - 🎨 **Explicación de la interfaz de usuario**  
   📄 Ver el documento [UXexplanation.md](docs/UXDiagram/UXexplanation.md) para más información sobre la experiencia de usuario implementada.
-
-- 🗃️ **Modelo entidad-relación (DER) y diagrama de clases completo (editable)**  
-  🔗 Accedé al archivo editable en [draw.io](https://app.diagrams.net/#G1jZHsZa8KM6ooPnOhm5nkLmQzmhAp4Le6#%7B%22pageId%22%3A%22C5RBs43oDa-KdzZeNtuy%22%7D)
 
 ## Integrantes del grupo con los que realicé el trabajo
 
