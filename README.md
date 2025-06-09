@@ -5,10 +5,11 @@
 1. [🎯 Introducción](#introducción)  
 2. [🎯 Objetivos](#objetivos)  
 3. [🎮 Funcionalidades principales](#-funcionalidades-principales)  
-4. [✅ Estándares técnicos de desarrollo cumplidos](#-estándares-técnicos-de-desarrollo-cumplidos)  
-5. [🤝 Forma de trabajo colaborativa](#-forma-de-trabajo-colaborativa)  
-6. [📚 Documentación adicional](#-documentación-adicional)  
-7. [👥 Integrantes del grupo con los que realicé el trabajo](#integrantes-del-grupo-con-los-que-realicé-el-trabajo)
+4. [🧩 Diagrama de clases](#-diagrama-de-clases)
+5. [✅ Estándares técnicos de desarrollo cumplidos](#-estándares-técnicos-de-desarrollo-cumplidos)  
+6. [🤝 Forma de trabajo colaborativa](#-forma-de-trabajo-colaborativa)  
+7. [📚 Documentación adicional](#-documentación-adicional)  
+8. [👥 Integrantes del grupo con los que realicé el trabajo](#integrantes-del-grupo-con-los-que-realicé-el-trabajo)
 
 ## Introducción
 
@@ -140,6 +141,11 @@ A continuación se detallan las funcionalidades implementadas en el proyecto, en
   - Compra todo lo posible si completó sus zonas.
   - Dispuesto a pagar hasta 200% para completar provincias preferidas.
   - Mejora propiedades en cada oportunidad.
+
+
+## 🧩 Diagrama de clases
+
+A continuación se muestra el **diagrama de clases** del proyecto, que representa las entidades principales del juego y su estructura de métodos:
 
 ![Diagrama de clases del juego El Estanciero](docs/Diagrama_de_clase_El_estanciero.png)
 
